@@ -4,26 +4,29 @@
 
 - 1. **List running containers**
 
-> docker ps
-> doecker ps -a
-> docker images
-> docker image ls
+    - docker ps
+
+    - docker ps -a
+
+    - docker images
+
+    - docker image ls
 
 - 2. **Stop the container**
 
-> docker stop <container_id>
+    - docker stop <container_id>
 
-- Replace <container_id> with the ID from the first column
+    - Replace <container_id> with the ID from the first column
 
 - 3. **Remove the container**
 
-> docker rm <container_id>
+    - docker rm <container_id>
 
 - 4. **Remove the image**
 
-> docker rmi <container image name>
+    - docker rmi <container image name>
 
-> docker rmi postgres:15.1-alpine
+    - docker rmi postgres:15.1-alpine
 
 
 ```plaintext
@@ -78,6 +81,6 @@ hello-world   latest    74cc54e27dc4   6 months ago   10.1kB
 
 ```
 
-- 5. One-liner to remove everything in one go (if you don’t care about other containers/images):
+- 5. **One-liner to remove everything in one go (if you don’t care about other containers/images):**
 
-> docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -q)
+    -  docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -q)
